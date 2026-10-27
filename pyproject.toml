@@ -1,0 +1,25 @@
+[project]
+name = "price-research-tool"
+version = "0.1.0"
+description = "AJAXでページが切り替わる通販サイトをブラウザ操作で巡回し、価格を書式つきExcelにまとめるツール"
+readme = "README.md"
+authors = [
+    { name = "gishi503", email = "m.m.n.0825k@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "openpyxl>=3.1.5",
+    "playwright>=1.64.1",
+]
+
+[project.scripts]
+price-research-tool = "price_research_tool:main"
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.2",
+]
